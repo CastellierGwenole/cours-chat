@@ -1,0 +1,7 @@
+<div class="chatbox" *ngIf="chatBox">
+<p  *ngFor="let item of chatBox.chat">
+  {{item}}
+</p>
+</div>
+<input [(ngModel)]="message" (keyup.enter)="chat()" >
+<button (click)="chat()">Envoyer</button>
